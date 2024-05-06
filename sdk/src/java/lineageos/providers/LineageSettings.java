@@ -1292,7 +1292,7 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator KEY_APP_SWITCH_LONG_PRESS_ACTION_VALIDATOR =
                 sHardwareKeyActionvalidator;
-
+        
         /**
          * Action to perform when the screen corner is long-swiped. (Default is 3)
          * (See KEY_HOME_LONG_PRESS_ACTION for valid values)
@@ -1312,7 +1312,7 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator KEY_EDGE_LONG_SWIPE_ACTION_VALIDATOR =
                 sHardwareKeyActionvalidator;
-
+        
         /**
          * Action to perform when three fingers swipe action is detected. (Default is 0)
          * (See KEY_HOME_LONG_PRESS_ACTION for valid values)
@@ -2095,7 +2095,7 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR =
                 sBooleanValidator;
-
+        
         /**
          * Whether to use the default LED values for all apps
          * 0 = 0ff, 1 = on
@@ -2843,12 +2843,6 @@ public final class LineageSettings {
         public static final String QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
 
         /**
-         * Global stats collection
-         * @hide
-         */
-        public static final String STATS_COLLECTION = "stats_collection";
-
-        /**
          * The global recents long press activity chosen by the user.
          * This setting is stored as a flattened component name as
          * per {@link ComponentName#flattenToString()}.
@@ -2927,7 +2921,7 @@ public final class LineageSettings {
          */
         public static final String ADVANCED_REBOOT = "advanced_reboot";
 
-        /**
+       /**
          * Whether to show advanced reboot on secured lockscreen
          * @hide
          */
@@ -3114,6 +3108,31 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator QS_TILES_TOGGLEABLE_ON_LOCK_SCREEN_VALIDATOR =
                 sBooleanValidator;
+
+        /**
+         * Custom time when user is scheduled to deactivate
+         * @hide
+         */
+        public static final String USER_ACTIVITY_END_TIME = "user_activity_end_time";
+
+        /** @hide */
+        public static final Validator USER_ACTIVITY_END_TIME_VALIDATOR =
+                sNonNegativeLongValidator;
+
+        /**
+         * Used to enable / disable network access for new installed apps
+         *
+         * Values are:
+         * 0: disabled
+         * 1: enabled
+         * @hide
+         */
+        public static final String DEFAULT_RESTRICT_NETWORK_DATA =
+                "default_restrict_network_data";
+
+        /** @hide */
+        public static final Validator DEFAULT_RESTRICT_NETWORK_DATA_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 1);
         // endregion
 
         /**
@@ -3147,6 +3166,8 @@ public final class LineageSettings {
                     QS_TILES_TOGGLEABLE_ON_LOCK_SCREEN_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
+            VALIDATORS.put(USER_ACTIVITY_END_TIME, USER_ACTIVITY_END_TIME_VALIDATOR);
+            VALIDATORS.put(DEFAULT_RESTRICT_NETWORK_DATA, DEFAULT_RESTRICT_NETWORK_DATA_VALIDATOR);
         }
     }
 
@@ -3592,6 +3613,22 @@ public final class LineageSettings {
         /** @hide */
         public static final Validator TRUST_RESTRICT_USB_VALIDATOR =
                 new InclusiveIntegerRangeValidator(0, 2);
+
+        /**
+         * Device operating mode
+         *
+         * Apply privacy/security improving settings based on the mode.
+         * Values are:
+         * 0: Standard (default)
+         * 1: Safer
+         * 2: Safest
+         * @hide
+         */
+        public static final String GARLIC_LEVEL = "garlic_level";
+
+        /** @hide */
+        public static final Validator GARLIC_LEVEL_VALIDATOR =
+                new InclusiveIntegerRangeValidator(0, 2);
         // endregion
 
         /**
@@ -3625,6 +3662,7 @@ public final class LineageSettings {
             VALIDATORS.put(GLOBAL_VPN_APP,
                     value -> value.isEmpty() || PACKAGE_NAME_VALIDATOR.validate(value));
             VALIDATORS.put(TRUST_RESTRICT_USB, TRUST_RESTRICT_USB_VALIDATOR);
+            VALIDATORS.put(GARLIC_LEVEL, GARLIC_LEVEL_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
                     __MAGICAL_TEST_PASSING_ENABLER_VALIDATOR);
         };
