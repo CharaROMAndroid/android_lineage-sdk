@@ -15,6 +15,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.os.Build;
 import android.os.Environment;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -146,7 +147,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (LOCAL_LOGV) Log.d(TAG, "Upgrading from version: " + oldVersion + " to " + newVersion);
         int upgradeVersion = oldVersion;
-
+        
         if (upgradeVersion < 2) {
             // Used to run loadSettings()
             upgradeVersion = 2;
@@ -206,7 +207,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             // Used to migrate LineageSettings.Global.POWER_NOTIFICATIONS_RINGTONE
             upgradeVersion = 13;
         }
-
         if (upgradeVersion < 14) {
             // Update button/keyboard brightness range
             if (mUserHandle == UserHandle.USER_OWNER) {
@@ -352,7 +352,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadDisableWindowBlursSetting();
             upgradeVersion = 24;
         }
-
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
@@ -438,9 +437,6 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO secure(name,value)"
                     + " VALUES(?,?);");
             // Secure
-            loadBooleanSetting(stmt, LineageSettings.Secure.STATS_COLLECTION,
-                    R.bool.def_stats_collection);
-
             loadBooleanSetting(stmt, LineageSettings.Secure.LOCKSCREEN_VISUALIZER_ENABLED,
                     R.bool.def_lockscreen_visualizer);
 
@@ -449,6 +445,21 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
 
             loadBooleanSetting(stmt, LineageSettings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
                     R.bool.def_qs_show_brightness_slider);
+
+            loadBooleanSetting(stmt, LineageSettings.Secure.BERRY_BLACK_THEME,
+                    R.bool.def_berry_black_theme);
+
+            loadIntegerSetting(stmt, LineageSettings.Secure.NETWORK_TRAFFIC_MODE,
+                    R.integer.def_network_traffic_mode);
+
+            loadBooleanSetting(stmt, LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE,
+                    R.bool.def_network_traffic_autohide);
+
+            loadIntegerSetting(stmt, LineageSettings.Secure.NETWORK_TRAFFIC_UNITS,
+                    R.integer.def_network_traffic_units);
+
+            loadBooleanSetting(stmt, LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS,
+                    R.bool.def_network_traffic_show_units);
         } finally {
             if (stmt != null) stmt.close();
         }
@@ -460,6 +471,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO system(name,value)"
                     + " VALUES(?,?);");
             // System
+            loadIntegerSetting(stmt, LineageSettings.System.FORCE_SHOW_NAVBAR,
+                    R.integer.def_force_show_navbar);
+
             loadIntegerSetting(stmt, LineageSettings.System.STATUS_BAR_QUICK_QS_PULLDOWN,
                     R.integer.def_qs_quick_pulldown);
 
@@ -494,6 +508,9 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 loadStringSetting(stmt, LineageSettings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                         R.string.def_notification_pulse_custom_value);
             }
+
+            loadBooleanSetting(stmt, LineageSettings.System.NAVIGATION_BAR_MENU_ARROW_KEYS,
+                    R.bool.def_navigation_bar_arrow_keys);
         } finally {
             if (stmt != null) stmt.close();
         }
@@ -505,6 +522,15 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO global(name,value)"
                     + " VALUES(?,?);");
             // Global
+            loadIntegerSetting(stmt, LineageSettings.Global.DEVICE_REBOOT_TIMEOUT,
+                    R.integer.def_device_reboot_timeout);
+
+            loadStringSetting(stmt, LineageSettings.Global.GLOBAL_VPN_APP,
+                    R.string.def_global_vpn_app);
+
+            // Always allow USB for debuggable builds; otherwise, allow only when unlocked.
+            loadSetting(stmt, LineageSettings.Global.TRUST_RESTRICT_USB,
+                    Build.IS_DEBUGGABLE ? "0" : "1");
         } finally {
             if (stmt != null) stmt.close();
         }
