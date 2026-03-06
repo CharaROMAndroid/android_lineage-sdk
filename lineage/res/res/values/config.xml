@@ -319,15 +319,15 @@
     <integer name="config_defaultChargingControlTargetTime">21600</integer>
 
     <!-- Default charging limit. -->
-    <integer name="config_defaultChargingControlLimit">80</integer>
+    <integer name="config_defaultChargingControlLimit">75</integer>
 
     <!-- Considering the fact that the system might have an incorrect estimation of the time to
          full. Set a time margin to make the device fully charged before the target time arrives.
 
-         The unit is minutes and the default value is 30 minutes. If you find that it is not enough
+         The unit is minutes and the default value is 45 minutes. If you find that it is not enough
          to make the device to be fully charged at the target time, increase the value
     -->
-    <integer name="config_chargingControlTimeMargin">30</integer>
+    <integer name="config_chargingControlTimeMargin">45</integer>
 
     <!-- Some devices might require always setting the toggle instead of set based on current toggle
          value. If this is the case, set this config to true to let the toggle provider always set
