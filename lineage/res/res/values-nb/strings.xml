@@ -46,3 +46,4 @@
     <string name="permlab_manageRemotePrefs">administrer fjernkontroll innstillinger</string>
     <string name="permdesc_manageRemotePrefs">Gir en app tilgang til å endre fjernkontroll innstillingene</string>
 </resources>
+

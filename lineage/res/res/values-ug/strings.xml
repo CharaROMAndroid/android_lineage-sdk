@@ -5,15 +5,15 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">crDroid سىستېمىسى</string>
+    <string name="lineageos_system_label">CharaROM سىستېمىسى</string>
     <string name="permlab_modifyProfiles">سىستېما سەپلەنمىسىنى ئۆزگەرتىش</string>
     <string name="permdesc_modifyProfiles">ئەپنىڭ سىستېما سەپلەنمىسىنى ئۆزگەرتىشىگە يول قويۇش.</string>
     <string name="permlab_useHardwareFramework">قاتتىق دىتال جازىسىنى ئىشلىتىش</string>
-    <string name="permdesc_useHardwareFramework">ئەپنىڭ crDroid قاتتىق دېتال قۇرۇلمىسىنى زىيارەت قىلىشقا يو قويىدۇ.</string>
-    <string name="permlab_writeSettings">crDroid سىستېما تەڭشىكىنى ئۆزگەرتىدۇ</string>
-    <string name="permdesc_writeSettings">ئەپنىڭ crDroid سىستېما تەڭشىكىنى ئۆزگەرتىشىگە يول قويىدۇ.</string>
-    <string name="permlab_writeSecureSettings">crDroid بىخەتەرلىك سىستېما تەڭشىكىنى ئۆزگەرتىدۇ</string>
-    <string name="permdesc_writeSecureSettings">ئەپنىڭ crDroid بىخەتەرلىك سىستېما تەڭشىكىنى ئۆزگەرتىشىگە يول قويىدۇ. ئادەتتىكى ئەپلەرنىڭ بۇنداق ھوقۇقى بولمايدۇ.</string>
+    <string name="permdesc_useHardwareFramework">ئەپنىڭ CharaROM قاتتىق دېتال قۇرۇلمىسىنى زىيارەت قىلىشقا يو قويىدۇ.</string>
+    <string name="permlab_writeSettings">CharaROM سىستېما تەڭشىكىنى ئۆزگەرتىدۇ</string>
+    <string name="permdesc_writeSettings">ئەپنىڭ CharaROM سىستېما تەڭشىكىنى ئۆزگەرتىشىگە يول قويىدۇ.</string>
+    <string name="permlab_writeSecureSettings">CharaROM بىخەتەرلىك سىستېما تەڭشىكىنى ئۆزگەرتىدۇ</string>
+    <string name="permdesc_writeSecureSettings">ئەپنىڭ CharaROM بىخەتەرلىك سىستېما تەڭشىكىنى ئۆزگەرتىشىگە يول قويىدۇ. ئادەتتىكى ئەپلەرنىڭ بۇنداق ھوقۇقى بولمايدۇ.</string>
     <string name="profileNameDefault">كۆڭۈلدىكى</string>
     <string name="profileNameWork">ئىش</string>
     <string name="profileNameHome">باش ئېكران</string>
@@ -56,9 +56,9 @@
     <string name="permlab_manageRemotePrefs">يىراقتىكى تەڭشەكنى باشقۇرۇش</string>
     <string name="permdesc_manageRemotePrefs">ئەپچنىڭ يىراقتىكى تەڭشەكنى باشقۇرۇشىغا يول قويىدۇ</string>
     <string name="build_date">ھاسىللىغان چېسلا</string>
-    <string name="lineage_api_level">crDroid API دەرىجىسى</string>
-    <string name="lineage_updates">crDroid يېڭىلاش</string>
-    <string name="lineage_version">crDroid نەشرى</string>
+    <string name="lineage_api_level">CharaROM API دەرىجىسى</string>
+    <string name="lineage_updates">CharaROM يېڭىلاش</string>
+    <string name="lineage_version">CharaROM نەشرى</string>
     <string name="lineage_vendor_security_patch">تەمىنلىگۈچى سودىگەر بىخەتەرلىك ياماق دەرىجىسى</string>
     <string name="unknown">يوچۇن</string>
     <string name="app_killed_message">ئەپ ئاخىرلاشتۇرۇلدى</string>
@@ -86,3 +86,4 @@
     <string name="charging_control_notification_content_target">%1$s توكداننىڭ توكى لىقلىنىدۇ</string>
     <string name="charging_control_notification_content_target_reached">توكدان توكلاندى</string>
 </resources>
+

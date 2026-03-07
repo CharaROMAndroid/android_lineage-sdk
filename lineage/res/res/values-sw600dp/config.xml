@@ -7,3 +7,4 @@
     <!-- Lockscreen rotation default -->
     <bool name="config_lockScreenRotationEnabledByDefault">true</bool>
 </resources>
+

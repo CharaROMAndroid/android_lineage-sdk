@@ -207,3 +207,4 @@
     <!-- Advanced rotation settings -->
     <java-symbol type="bool" name="config_enableAdvancedRotationSettings" />
 </resources>
+
