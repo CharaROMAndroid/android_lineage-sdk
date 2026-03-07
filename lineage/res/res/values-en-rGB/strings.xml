@@ -5,15 +5,15 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="lineageos_system_label">crDroid System</string>
+    <string name="lineageos_system_label">CharaROM System</string>
     <string name="permlab_modifyProfiles">modify system profiles</string>
     <string name="permdesc_modifyProfiles">Allows an app to modify system profiles.</string>
     <string name="permlab_useHardwareFramework">use hardware framework</string>
-    <string name="permdesc_useHardwareFramework">Allows an app access to the crDroid hardware framework.</string>
-    <string name="permlab_writeSettings">modify crDroid system settings</string>
-    <string name="permdesc_writeSettings">Allows an app to modify crDroid system settings.</string>
-    <string name="permlab_writeSecureSettings">modify crDroid secure system settings</string>
-    <string name="permdesc_writeSecureSettings">Allows an app to modify crDroid secure system settings. Not for use by normal apps.</string>
+    <string name="permdesc_useHardwareFramework">Allows an app access to the CharaROM hardware framework.</string>
+    <string name="permlab_writeSettings">modify CharaROM system settings</string>
+    <string name="permdesc_writeSettings">Allows an app to modify CharaROM system settings.</string>
+    <string name="permlab_writeSecureSettings">modify CharaROM secure system settings</string>
+    <string name="permdesc_writeSecureSettings">Allows an app to modify CharaROM secure system settings. Not for use by normal apps.</string>
     <string name="profileNameDefault">Default</string>
     <string name="profileNameWork">Work</string>
     <string name="profileNameHome">Home</string>
@@ -27,9 +27,9 @@
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Other</string>
     <string name="charging_speed">Charging speed</string>
-    <string name="charging_speed_slow">Slow</string>
-    <string name="charging_speed_fast">Fast</string>
-    <string name="charging_speed_super_fast">Super fast</string>
+    <string name="charging_speed_slow">Slow (Healthy for the battery... probably.)</string>
+    <string name="charging_speed_fast">Fast (Whee!)</string>
+    <string name="charging_speed_super_fast">Super fast (VROOOOM!)</string>
     <string name="live_display_auto">Automatic</string>
     <string name="live_display_auto_summary">Automatically adjust colour temperature of screen after sunset and sunrise</string>
     <string name="live_display_off">Off</string>
@@ -56,9 +56,9 @@
     <string name="permlab_manageRemotePrefs">manage remote settings</string>
     <string name="permdesc_manageRemotePrefs">Allows an app to manage remote settings</string>
     <string name="build_date">Build date</string>
-    <string name="lineage_api_level">crDroid API level</string>
-    <string name="lineage_updates">crDroid updates</string>
-    <string name="lineage_version">crDroid version</string>
+    <string name="lineage_api_level">CharaROM API level</string>
+    <string name="lineage_updates">CharaROM updates</string>
+    <string name="lineage_version">CharaROM version</string>
     <string name="lineage_vendor_security_patch">Vendor security patch level</string>
     <string name="unknown">Unknown</string>
     <string name="app_killed_message">Application killed</string>
@@ -86,3 +86,4 @@
     <string name="charging_control_notification_content_target">Battery will be fully charged at %1$s</string>
     <string name="charging_control_notification_content_target_reached">Battery is charged</string>
 </resources>
+

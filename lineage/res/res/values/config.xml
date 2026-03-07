@@ -346,3 +346,4 @@
     <!-- Advanced rotation settings -->
     <bool name="config_enableAdvancedRotationSettings">true</bool>
 </resources>
+

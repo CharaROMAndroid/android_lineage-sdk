@@ -5,24 +5,23 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Label for the crDroid system components when they are shown to the user. -->
-    <string name="lineageos_system_label">crDroid System</string>
-
+    <!-- Label for the LineageOS system components when they are shown to the user. -->
+    <string name="lineageos_system_label">CharaROM System</string>
     <!-- Labels for the MODIFY_PROFILES permission. -->
     <string name="permlab_modifyProfiles">modify system profiles</string>
     <string name="permdesc_modifyProfiles">Allows an app to modify system profiles.</string>
 
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">use hardware framework</string>
-    <string name="permdesc_useHardwareFramework">Allows an app access to the crDroid hardware framework.</string>
+    <string name="permdesc_useHardwareFramework">Allows an app access to the CharaROM hardware framework.</string>
 
     <!-- Labels for the WRITE_SETTINGS permission -->
-    <string name="permlab_writeSettings">modify crDroid system settings</string>
-    <string name="permdesc_writeSettings">Allows an app to modify crDroid system settings.</string>
+    <string name="permlab_writeSettings">modify CharaROM system settings</string>
+    <string name="permdesc_writeSettings">Allows an app to modify CharaROM system settings.</string>
 
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-    <string name="permlab_writeSecureSettings">modify crDroid secure system settings</string>
-    <string name="permdesc_writeSecureSettings">Allows an app to modify crDroid secure system settings. Not for use by normal apps.</string>
+    <string name="permlab_writeSecureSettings">modify CharaROM secure system settings</string>
+    <string name="permdesc_writeSecureSettings">Allows an app to modify CharaROM secure system settings. Not for use by normal apps.</string>
 
     <!-- Profiles -->
     <!-- Names of default profiles. -->
@@ -45,9 +44,9 @@
 
     <!-- Charging speed strings -->
     <string name="charging_speed">Charging speed</string>
-    <string name="charging_speed_slow">Slow</string>
-    <string name="charging_speed_fast">Fast</string>
-    <string name="charging_speed_super_fast">Super fast</string>
+    <string name="charging_speed_slow">Slow (Healthy for the battery... probably.)</string>
+    <string name="charging_speed_fast">Fast (Whee!)</string>
+    <string name="charging_speed_super_fast">Super fast (VROOOOM!)</string>
 
     <!-- LiveDisplay strings -->
     <string name="live_display_title" translatable="false">LiveDisplay</string>
@@ -84,12 +83,12 @@
 
     <!-- About device screen, build date -->
     <string name="build_date">Build date</string>
-    <!-- About device screen, crDroid API Level -->
-    <string name="lineage_api_level">crDroid API level</string>
-    <!-- About device screen, crDroid updates -->
-    <string name="lineage_updates">crDroid updates</string>
-    <!-- About device screen, crDroid version -->
-    <string name="lineage_version">crDroid version</string>
+    <!-- About device screen, LineageOS API Level -->
+    <string name="lineage_api_level">CharaROM API level</string>
+    <!-- About device screen, LineageOS updates -->
+    <string name="lineage_updates">CharaROM updates</string>
+    <!-- About device screen, LineageOS version -->
+    <string name="lineage_version">CharaROM version</string>
     <!-- About device screen, vendor security patch -->
     <string name="lineage_vendor_security_patch">Vendor security patch level</string>
 
@@ -131,3 +130,4 @@
     <string name="charging_control_notification_content_target">Battery will be fully charged at %1$s</string>
     <string name="charging_control_notification_content_target_reached">Battery is charged</string>
 </resources>
+
