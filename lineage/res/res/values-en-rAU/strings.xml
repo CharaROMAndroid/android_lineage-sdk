@@ -27,9 +27,9 @@
     <string name="profileGroupSMS">SMS</string>
     <string name="wildcardProfile">Other</string>
     <string name="charging_speed">Charging speed</string>
-    <string name="charging_speed_slow">Slow</string>
-    <string name="charging_speed_fast">Fast</string>
-    <string name="charging_speed_super_fast">Super fast</string>
+    <string name="charging_speed_slow">Slow (Healthy for the battery... probably.)</string>
+    <string name="charging_speed_fast">Fast (Whee!)</string>
+    <string name="charging_speed_super_fast">Super fast (VROOOOM!)</string>
     <string name="live_display_auto">Automatic</string>
     <string name="live_display_auto_summary">Automatically adjust colour temperature of screen after sunset and sunrise</string>
     <string name="live_display_off">Off</string>
