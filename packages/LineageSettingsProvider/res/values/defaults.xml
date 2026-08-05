@@ -76,4 +76,33 @@
     <!-- Default for Settings.Global.DISABLE_WINDOW_BLURS -->
     <integer name="def_disable_window_blurs">0</integer>
 
+
+
+
+    <!-- Default for network traffic show units -->
+    <bool name="def_network_traffic_show_units">true</bool>
+
+    <!-- Default for navigation bar arrow keys -->
+    <bool name="def_navigation_bar_arrow_keys">false</bool>
+
+    <!-- Default for device reboot timeout (0 = disabled) -->
+    <integer name="def_device_reboot_timeout">0</integer>
+
+    <!-- Default for global VPN app -->
+    <string name="def_global_vpn_app"></string>
+
+
+
+    <!-- Default for berry black theme -->
+    <bool name="def_berry_black_theme">false</bool>
+
+    <!-- Default for network traffic mode (0 = disabled) -->
+    <integer name="def_network_traffic_mode">0</integer>
+
+    <!-- Default for network traffic autohide -->
+    <bool name="def_network_traffic_autohide">true</bool>
+
+    <!-- Default for network traffic units (0 = bytes, 1 = bits) -->
+    <integer name="def_network_traffic_units">0</integer>
+
 </resources>
