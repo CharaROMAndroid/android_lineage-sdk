@@ -38,7 +38,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 24;
+    private static final int DATABASE_VERSION = 25;
 
     public static class LineageTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -352,6 +352,23 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
             loadDisableWindowBlursSetting();
             upgradeVersion = 24;
         }
+
+        if (upgradeVersion < 25) {
+            // Set default conditional charging sound paths
+            if (mUserHandle == UserHandle.USER_SYSTEM) {
+                Settings.Global.putString(mContext.getContentResolver(),
+                        Settings.Global.CHARGING_STARTED_SOUND_LOW,
+                        "/product/media/audio/ui/charging_started_low.flac");
+                Settings.Global.putString(mContext.getContentResolver(),
+                        Settings.Global.CHARGING_STARTED_SOUND_MEDIUM,
+                        "/product/media/audio/ui/charging_started_medium.flac");
+                Settings.Global.putString(mContext.getContentResolver(),
+                        Settings.Global.CHARGING_STARTED_SOUND_HIGH,
+                        "/product/media/audio/ui/charging_started_high.flac");
+            }
+            upgradeVersion = 25;
+        }
+        
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
             Log.wtf(TAG, "warning: upgrading settings database to version "
