@@ -1137,12 +1137,12 @@ public final class LineageSettings {
          * 11 - Play/pause music playback
          * 12 - Take screenshot
          * 13 - Take partial screenshot
-         * 14 - Torch
-         * 15 - Volume Panel
-         * 16 - Clear All Notifications
-         * 17 - Notifications
-         * 18 - Toggle Qs Panel
-         * 19 - Ringer Modes
+         * 14 - Cycle ringer mode
+         * 15 - Torch
+         * 16 - Volume Panel
+         * 17 - Clear All Notifications
+         * 18 - Notifications
+         * 19 - Toggle Qs Panel
          */
         public static final String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
 
