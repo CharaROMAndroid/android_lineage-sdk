@@ -1782,6 +1782,17 @@ public final class LineageSettings {
                 sBooleanValidator;
 
         /**
+         * Whether to scramble the SIM PIN and PUK keypad.
+         * 0 = off (default), 1 = on
+         */
+        public static final String SIM_PIN_SCRAMBLE_LAYOUT =
+                "sim_scramble_pin_layout";
+
+        /** @hide */
+        public static final Validator SIM_PIN_SCRAMBLE_LAYOUT_VALIDATOR =
+                sBooleanValidator;
+
+        /**
          * Whether keyguard will rotate to landscape mode
          * 0 = false, 1 = true
          */
@@ -2319,6 +2330,7 @@ public final class LineageSettings {
             VALIDATORS.put(BLUETOOTH_ACCEPT_ALL_FILES, BLUETOOTH_ACCEPT_ALL_FILES_VALIDATOR);
             VALIDATORS.put(LOCKSCREEN_PIN_SCRAMBLE_LAYOUT,
                     LOCKSCREEN_PIN_SCRAMBLE_LAYOUT_VALIDATOR);
+            VALIDATORS.put(SIM_PIN_SCRAMBLE_LAYOUT, SIM_PIN_SCRAMBLE_LAYOUT_VALIDATOR);
             VALIDATORS.put(LOCKSCREEN_ROTATION, LOCKSCREEN_ROTATION_VALIDATOR);
             VALIDATORS.put(SHOW_ALARM_ICON, SHOW_ALARM_ICON_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_IME_SWITCHER, STATUS_BAR_IME_SWITCHER_VALIDATOR);
